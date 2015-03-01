@@ -13,6 +13,13 @@ angular.module('parksandrecApp')
         url: '/parks/:id',
         templateUrl: 'app/parks/park_detail.html',
         controller: 'ParkDetailCtrl'
+      })
+
+      .state('parksTag', {
+        url: '/parks/tag/:tag',
+        templateUrl: 'app/parks/parks_list.html',
+        controller: 'ParksTagCtrl'
       });
+
 
   });

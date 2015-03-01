@@ -21,6 +21,19 @@ exports.show = function(req, res) {
   });
 };
 
+
+// Get a  parks by tag
+exports.showTag = function(req, res) {
+  console.log('api tag', req.params.tag)
+
+  Park.find({features: req.params.tag}, function (err, park) {
+    if(err) { return handleError(res, err); }
+    if(!park) { return res.send(404); }
+    return res.json(park);
+  });
+};
+
+
 // Creates a new park in the DB.
 exports.create = function(req, res) {
   Park.create(req.body, function(err, park) {
