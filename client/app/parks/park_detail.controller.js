@@ -77,35 +77,43 @@ angular.module('parksandrecApp')
   .controller('ParkDetailCtrl', ['$scope', 'parksService', '$stateParams', 'uiGmapGoogleMapApi', 'getLocation',
     function ($scope, parksService, $stateParams, uiGmapGoogleMapApi, getLocation) {
 
-    parksService.getParkDetail($stateParams.id).then(function(park){
+      parksService.getParkDetail($stateParams.id).then(function(park){
 
-      var parkMarker = {latitude: park.data.lat, longitude: park.data.long,  id: $stateParams.id};
-      var currentMarker = {latitude: 33.9777809, longitude: -118.40835340000001,  id: 1};
-      // var currentMarker = {latitude: 0.0, longitude: 0.0,  id: 1};
+        var parkMarker = {latitude: park.data.lat, longitude: park.data.long,  id: $stateParams.id};
+        //var currentMarker = {latitude: 33.9777809, longitude: -118.40835340000001,  id: 1};
+        var currentMarker = {latitude: 34, longitude: -118,  id: 1};
 
-      var coors = [parkMarker, currentMarker];
+        var coors = [parkMarker];
 
-      // uiGmapGoogleMapApi is a promise.
-      // The "then" callback function provides the google.maps object.
-      uiGmapGoogleMapApi.then(function(maps) {
-        getLocation.location().then(function(value){
-          $scope.map.center = value;
-          console.log(value);
+        // uiGmapGoogleMapApi is a promise.
+        // The "then" callback function provides the google.maps object.
+        uiGmapGoogleMapApi.then(function(maps) {
+
+          $scope.map = {
+            center: { latitude: park.data.lat, longitude: park.data.long },
+            zoom: 11
+            //bounds: calculateBounds(coors)
+          };
+
+          getLocation.location().then(function(value){
+            $scope.map.center = value;
+            currentMarker = value;
+            currentMarker.id = 1;
+            console.log(value);
+            coors.push(currentMarker);
+            $scope.markers = coors;
+            console.log($scope.markers);
+          });
+
         });
 
-        $scope.map = {
-          // center: { latitude: park.data.lat, longitude: park.data.long },
-          zoom: 11
-          //bounds: calculateBounds(coors)
-        };
+        $scope.park = park.data;
+        $scope.features = park.data.features.join(', ');
+        //$scope.markers = coors;
+        //console.log(coors)
+
       });
 
-      $scope.park = park.data;
-      $scope.features = park.data.features.join(', ');
-      $scope.markers = coors;
-
-    });
-
-  }]);
+    }]);
 
 
