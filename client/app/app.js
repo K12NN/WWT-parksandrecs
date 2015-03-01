@@ -6,7 +6,8 @@ angular.module('parksandrecApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'geoService'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

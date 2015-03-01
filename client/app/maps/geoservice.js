@@ -3,14 +3,18 @@
  */
 var geoserv = angular.module('geoService',[]);
 
-geoserve.factory('getLocation', [function () {
+geoserv.factory('getLocation',  [function ($q) {
   return {
     location: function() {
       if (navigator.geolocation){
         //W3C geolocation method gets location data
+
+        var defer = $q.defer();
+        defer.resolve({});
+
+
         return navigator.geolocation.getCurrentPosition(showPosition, showError); //(success callback, error callback)
-      } else
-      {
+      } else {
         return "Geolocation is not supported by this browser.";
       }
     }
@@ -19,11 +23,13 @@ geoserve.factory('getLocation', [function () {
 
 var showPosition = function (position) {
   var initialLocation = {latitude: position.coords.latitude, longitude:position.coords.longitude};
-  console.log(intialLocation);
+  console.log(initialLocation);
   return initialLocation;
 };
 
 var showError = function (error) {
+          console.log('yes')
+
   switch (error.code) {
     case error.PERMISSION_DENIED:
       $scope.error = "User denied the request for Geolocation."

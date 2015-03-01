@@ -11,6 +11,7 @@ angular.module('parksandrecApp')
     uiGmapGoogleMapApi.then(function(maps) {
 
       $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-      //$scope.map.center = getLocation.location(); //uses 'location' method from 'getLocation' service
+      // $scope.map.center = 
+      getLocation.location(); //uses 'location' method from 'getLocation' service
     });
 }]);
