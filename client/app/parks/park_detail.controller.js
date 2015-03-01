@@ -89,9 +89,13 @@ angular.module('parksandrecApp')
       // The "then" callback function provides the google.maps object.
       uiGmapGoogleMapApi.then(function(maps) {
         getLocation.location().then(function(value){
-
           $scope.map.center = value;
+          currentMarker = value;
+          currentMarker.id = 1;
           console.log(value);
+          coors.push(currentMarker);
+          $scope.markers = coors;
+          console.log($scope.markers);
         });
 
         $scope.map = {
