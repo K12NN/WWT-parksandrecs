@@ -3,11 +3,6 @@
 angular.module('parksandrecApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('initial', {
-        url: '/initial',
-        templateUrl: 'app/views/initial.html',
-        controller: 'InitialCtrl'
-      })
       .state('where', {
         url: '/where',
         templateUrl: 'app/views/where.html',

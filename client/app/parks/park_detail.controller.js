@@ -80,24 +80,24 @@ angular.module('parksandrecApp')
     parksService.getParkDetail($stateParams.id).then(function(park){
 
       var parkMarker = {latitude: park.data.lat, longitude: park.data.long,  id: $stateParams.id};
-      var currentMarker = {latitude: 34.032175, longitude: -118.395361,  id: 1};
+      var currentMarker = {latitude: 33.9777809, longitude: -118.40835340000001,  id: 1};
       // var currentMarker = {latitude: 0.0, longitude: 0.0,  id: 1};
 
       var coors = [parkMarker, currentMarker];
-
 
       // uiGmapGoogleMapApi is a promise.
       // The "then" callback function provides the google.maps object.
       uiGmapGoogleMapApi.then(function(maps) {
         getLocation.location().then(function(value){
-          console.log('geolocation', value)
-           $scope.map.center = value;
-        })
+
+          $scope.map.center = value;
+          console.log(value);
+        });
 
         $scope.map = {
           // center: { latitude: park.data.lat, longitude: park.data.long },
-          zoom: 11,
-          bounds: calculateBounds(coors)
+          zoom: 11
+          //bounds: calculateBounds(coors)
         };
       });
 

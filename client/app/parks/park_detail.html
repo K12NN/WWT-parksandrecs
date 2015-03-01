@@ -1,12 +1,28 @@
-<h1>{{park.parkName}}</h1>
-<p>Address: {{park.address}} {{park.city}}, {{park.state}} {{park.zip}}</p>
-<p ng-show=park.website>Website: <a href="{{park.website}}">{{park.name}}</a> </p>
-<p>Phone: {{park.phone}} </p>
-<p>Features: {{features}}</p>
-<p>Latitude: {{park.lat}}, Longitude: {{park.long}}</p>
- 
-<ui-gmap-google-map center='map.center' zoom='map.zoom'>
-  <ui-gmap-markers models="markers" coords="'self'" icon="'icon'">
-  </ui-gmap-markers>
+<div class="container-white container-fluid">
+  <div id="grass">
+    <a href="index.html">
+      <img src="../../components/img/parks-n-rec.png" class="logo">
+      <img src="../../components/img/customize.png" class="customize">
+    </a>
+  </div>
+  <div>
+    <div class="col-xs-12">
+      <div>
+        <h1 style="text-align:left;">{{park.parkName}} </h1>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+          <ui-gmap-markers models="markers" coords="'self'" icon="'icon'">
+          </ui-gmap-markers>
 
-</ui-gmap-google-map>
+        </ui-gmap-google-map>
+
+        <p style="text-align:left">
+          Address: {{park.address}} {{park.city}}, {{park.state}} {{park.zip}}<br>
+          Phone: {{park.phone}} <br>
+        <span ng-show="park.website">Website: <a href="{{park.website}}">{{park.name}}</a> </span><br>
+          Features: {{features}}<br>
+          Latitude: {{park.lat}}, Longitude: {{park.long}}<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
