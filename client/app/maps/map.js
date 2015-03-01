@@ -3,8 +3,8 @@
 angular.module('parksandrecApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('map', {
-        url: '/map',
+      .state('maps', {
+        url: '/maps',
         templateUrl: 'app/maps/map.html',
         controller: 'MapCtrl'
       });
