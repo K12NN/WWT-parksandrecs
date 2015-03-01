@@ -5,7 +5,8 @@ angular.module('parksandrecApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'uiGmapgoogle-maps'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -14,6 +15,14 @@ angular.module('parksandrecApp', [
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
   })
+
+  .config(function(uiGmapGoogleMapApiProvider) {
+    uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyDML0E3uIDaQZ1l5cJV8kMgUFrclDZaXWQ',
+        v: '3.17',
+        libraries: 'weather,geometry,visualization'
+    });
+})
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
