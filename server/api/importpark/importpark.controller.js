@@ -9,7 +9,7 @@ var Importpark = require('./importpark.model');
 exports.index = function(req, res) {
   console.log('import');
 
-  var stream = fs.createReadStream("./parks.csv");
+  // var stream = fs.createReadStream("./parks.csv");
 
   // csv
    // .fromPath("./parks.csv")
