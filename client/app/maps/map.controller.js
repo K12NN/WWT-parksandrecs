@@ -10,9 +10,8 @@ angular.module('parksandrecApp')
     // The "then" callback function provides the google.maps object.
     uiGmapGoogleMapApi.then(function(maps) {
       $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+      getLocation.location().then(function(value){
+         $scope.map.center = value;
+      })
     });
-    getLocation.location().then(function(value){
-      $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 }; //need to re-declare or it's undefined
-      $scope.map.center = value;
-    })
 }]);
