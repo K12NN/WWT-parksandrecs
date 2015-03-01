@@ -1,5 +1,13 @@
-<ul>
-  <li ng-repeat='park in parks'>
-    <a href="/parks/{{park._id}}">{{park.parkName}}</a> - {{park.city}}
-  </li>
-</ul>
+<div class="container-white container-fluid">
+  <div id="grass">
+    <a href="index.html"><img src="img/parks-n-rec.png" class="logo"></a>
+  </div>
+
+  <div class="col-xs-12 bot-border icons-title">
+    <ul>
+      <li ng-repeat='park in parks'>
+        <a href="/parks/{{park._id}}">{{park.parkName}}</a> - {{park.city}}
+      </li>
+    </ul>
+  </div>
+</div>
