@@ -1,0 +1,218 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  margin: 0px;
+  padding: 0px;
+  background-color: #60823c;
+  text-align: center;
+  height: 100%;
+  color: #fff;
+}
+.container-white {
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  text-align: center;
+  height: 100%;
+  color: #60823c;
+}
+.container-white a {
+  color: #60823c;
+}
+.container-white a:hover {
+  color: #60823c;
+}
+h1 {
+  padding: 12px 0;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.7em;
+  margin: 0px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+p {
+  margin: 0 0 0px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-transform: lowercase;
+}
+a {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+a:visited {
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+}
+.noun-icon {
+  float: left;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+.icons-title {
+  float: left;
+  padding-left: 25px;
+  text-align: left;
+  vertical-align: middle;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.bot-border {
+  border-bottom: 1px solid #dedede;
+  height: 130px;
+  padding-top: 25px;
+  vertical-align: middle;
+}
+.logo {
+  text-align: center;
+  padding: 15px;
+}
+.overlay {
+  background-color: rgba(75, 108, 39, 0.7);
+}
+.bottom {
+  margin-top: 140px;
+}
+.mid {
+  margin: 70px 0;
+}
+.mid4 {
+  margin: 35px 0;
+}
+#grass {
+  background: url(../img/grass.jpg) no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#where {
+  background: url(../img/where.png) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0px;
+}
+#what {
+  background: url(../img/what.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#water {
+  background: url(../img/water.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#land {
+  background: url(../img/land.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#fitness {
+  background: url(../img/fitness.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#cultural {
+  background: url(../img/cultural.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#scenic {
+  background: url(../img/scenic.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#sports {
+  background: url(../img/sports.png) no-repeat;
+  padding: 0px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  ul.banner-social-buttons li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons li:last-child {
+    margin-bottom: 0;
+  }
+}
+::-moz-selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+::selection {
+  text-shadow: none;
+  background: #fcfcfc;
+  background: rgba(255, 255, 255, 0.2);
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.park-link a {
+  color: #428bca;
+}

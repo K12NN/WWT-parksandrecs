@@ -19,4 +19,9 @@ angular.module('parksandrecApp')
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
+
+    $scope.titles = [
+      {page: "where", title: "Where to go"},
+      {page: "what", title: "What to do"},
+    ];
   });
