@@ -6,7 +6,8 @@ angular.module('parksandrecApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'uiGmapgoogle-maps'
+  'uiGmapgoogle-maps',
+  'geoService'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
@@ -22,6 +23,7 @@ angular.module('parksandrecApp', [
         v: '3.17',
         libraries: 'weather,geometry,visualization'
     });
+
 })
 
   .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {

@@ -9,8 +9,11 @@ angular.module('parksandrecApp')
     // uiGmapGoogleMapApi is a promise.
     // The "then" callback function provides the google.maps object.
     uiGmapGoogleMapApi.then(function(maps) {
-
       $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-      //$scope.map.center = getLocation.location(); //uses 'location' method from 'getLocation' service
+      getLocation.location()
+    }).then(function(data){
+      $scope.map.center = data;
+    },function(error){
+      console.log(error);
     });
 }]);
