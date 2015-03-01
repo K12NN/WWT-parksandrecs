@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/parksandrec-dev'
+    uri: 'mongodb://wonderwomen:wonderwomen@ds049631.mongolab.com:49631/wonderwomentech'
   },
 
   seedDB: true
