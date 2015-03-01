@@ -20,4 +20,7 @@ angular.module('parksandrecApp')
   .controller("WaterCtrl", function($scope) {
     $scope.test = "test";
     console.log('water page loaded');
-});
+})
+  .controller("BeachCtrl", function($scope,$http) {
+    $http.get().success(function(data){$scope.beaches = data});
+  });

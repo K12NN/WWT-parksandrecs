@@ -18,10 +18,18 @@ angular.module('parksandrecApp')
       });
     };
 
+    var getParksTag = function(tag) {
+      return $http({
+        method: 'GET',
+        url: '/api/parks/tag/'+tag
+      });
+    };
+
 
     // Public API here
     return {
       getParks: getParks,
-      getParkDetail: getParkDetail
+      getParkDetail: getParkDetail,
+      getParksTag: getParksTag
     };
   });

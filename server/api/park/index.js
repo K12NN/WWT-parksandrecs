@@ -12,4 +12,7 @@ router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
 router.delete('/:id', controller.destroy);
 
+router.get('/tag/:tag', controller.showTag);
+
+
 module.exports = router;
