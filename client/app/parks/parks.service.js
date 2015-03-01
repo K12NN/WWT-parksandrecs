@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('parksandrecApp')
-  .factory('park', function ($http) {
+  .factory('parksService', function ($http) {
 
     var getParks = function(setting) {
       return $http({
@@ -11,10 +11,17 @@ angular.module('parksandrecApp')
       });
     };
 
+    var getParkDetail = function(id) {
+      return $http({
+        method: 'GET',
+        url: '/api/parks/'+id
+      });
+    };
 
 
     // Public API here
     return {
-      getParks: getParks
+      getParks: getParks,
+      getParkDetail: getParkDetail
     };
   });

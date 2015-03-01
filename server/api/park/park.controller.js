@@ -14,6 +14,7 @@ exports.index = function(req, res) {
 // Get a single park
 exports.show = function(req, res) {
   Park.findById(req.params.id, function (err, park) {
+    console.log('one park');
     if(err) { return handleError(res, err); }
     if(!park) { return res.send(404); }
     return res.json(park);

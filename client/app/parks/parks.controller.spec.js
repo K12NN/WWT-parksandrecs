@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: ParkCtrl', function () {
+describe('Controller: ParksCtrl', function () {
 
   // load the controller's module
   beforeEach(module('parksandrecApp'));
 
-  var ParkCtrl, scope;
+  var ParksCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    ParkCtrl = $controller('ParkCtrl', {
+    ParksCtrl = $controller('ParksCtrl', {
       $scope: scope
     });
   }));
