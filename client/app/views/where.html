@@ -1,7 +1,21 @@
-<p> this is the where page</p>
-
-<a ui-sref="land">Land</a>
-
-<a ui-sref="water">Water</a>
-
-<div ui-view></div>
+<div class="container container-fluid">
+        <div id="grass">
+            <a ui-sref="main"><img src="../../components/img/parks-n-rec.png" class="logo"></a>
+        </div>
+                <div>
+                    <a ui-sref="water">
+                        <div class="col-xs-12" id="water">
+                            <div class="mid">
+                                <h1><i class="fa fa-angle-left"></i> Water <i class="fa fa-angle-right"></i></h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a ui-sref="land">
+                        <div class="col-xs-12" id="land">
+                            <div class="mid">
+                                <h1><i class="fa fa-angle-left"></i> Land <i class="fa fa-angle-right"></i></h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        </div>

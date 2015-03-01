@@ -5,7 +5,7 @@ angular.module('parksandrecApp')
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'app/main/main.html',
+        templateUrl: 'app/views/initial.html',
         controller: 'MainCtrl'
       });
   });
