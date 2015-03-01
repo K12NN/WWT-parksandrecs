@@ -3,4 +3,10 @@
 <p ng-show=park.website>Website: <a href="{{park.website}}">{{park.name}}</a> </p>
 <p>Phone: {{park.phone}} </p>
 <p>Features: {{features}}</p>
+<p>Latitude: {{park.lat}}, Longitude: {{park.long}}</p>
+ 
+<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+  <ui-gmap-markers models="parkMarkers" coords="'self'" icon="'icon'">
+  </ui-gmap-markers>
 
+</ui-gmap-google-map>
