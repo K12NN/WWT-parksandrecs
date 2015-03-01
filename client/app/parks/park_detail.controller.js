@@ -80,10 +80,10 @@ angular.module('parksandrecApp')
     parksService.getParkDetail($stateParams.id).then(function(park){
 
       var parkMarker = {latitude: park.data.lat, longitude: park.data.long,  id: $stateParams.id};
-      var currentMarker = {latitude: 33.9777809, longitude: -118.40835340000001,  id: 1};
-      // var currentMarker = {latitude: 0.0, longitude: 0.0,  id: 1};
+      //var currentMarker = {latitude: 33.9777809, longitude: -118.40835340000001,  id: 1};
+      var currentMarker = {latitude: 34, longitude: -118,  id: 1};
 
-      var coors = [parkMarker, currentMarker];
+      var coors = [parkMarker];
 
       // uiGmapGoogleMapApi is a promise.
       // The "then" callback function provides the google.maps object.
