@@ -1,0 +1,12 @@
+<h1>{{park.parkName}}</h1>
+<p>Address: {{park.address}} {{park.city}}, {{park.state}} {{park.zip}}</p>
+<p ng-show=park.website>Website: <a href="{{park.website}}">{{park.name}}</a> </p>
+<p>Phone: {{park.phone}} </p>
+<p>Features: {{features}}</p>
+<p>Latitude: {{park.lat}}, Longitude: {{park.long}}</p>
+ 
+<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+  <ui-gmap-markers models="markers" coords="'self'" icon="'icon'">
+  </ui-gmap-markers>
+
+</ui-gmap-google-map>

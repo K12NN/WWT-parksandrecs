@@ -44,4 +44,3 @@ geoserv.factory('getLocation', ['$q',function ($q) {
   //    break;
   //}
 //};
-
