@@ -74,8 +74,8 @@ var calculateBounds  = function (coors) {
 
 
 angular.module('parksandrecApp')
-  .controller('ParkDetailCtrl', ['$scope', 'parksService', '$stateParams', 'uiGmapGoogleMapApi',
-    function ($scope, parksService, $stateParams, uiGmapGoogleMapApi) {
+  .controller('ParkDetailCtrl', ['$scope', 'parksService', '$stateParams', 'uiGmapGoogleMapApi', 'getLocation',
+    function ($scope, parksService, $stateParams, uiGmapGoogleMapApi, getLocation) {
 
     parksService.getParkDetail($stateParams.id).then(function(park){
 
@@ -89,8 +89,13 @@ angular.module('parksandrecApp')
       // uiGmapGoogleMapApi is a promise.
       // The "then" callback function provides the google.maps object.
       uiGmapGoogleMapApi.then(function(maps) {
+        getLocation.location().then(function(value){
+          console.log('geolocation', value)
+           $scope.map.center = value;
+        })
+
         $scope.map = {
-          center: { latitude: park.data.lat, longitude: park.data.long },
+          // center: { latitude: park.data.lat, longitude: park.data.long },
           zoom: 11,
           bounds: calculateBounds(coors)
         };
