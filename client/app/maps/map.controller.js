@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('parksandrecApp')
-  .controller("MapCtrl", function($scope, uiGmapGoogleMapApi) {
+  .controller("MapCtrl", ['$scope','uiGmapGoogleMapApi','getLocation',function($scope, uiGmapGoogleMapApi,getLocation) {
     // Do stuff with your $scope.
     // Note: Some of the directives require at least something to be defined originally!
     // e.g. $scope.markers = []
@@ -11,6 +11,6 @@ angular.module('parksandrecApp')
     uiGmapGoogleMapApi.then(function(maps) {
 
       $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-
+      //$scope.map.center = getLocation.location(); //uses 'location' method from 'getLocation' service
     });
-});
+}]);
