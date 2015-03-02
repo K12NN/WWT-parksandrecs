@@ -96,7 +96,7 @@ angular.module('parksandrecApp')
           };
 
           getLocation.location().then(function(value){
-            $scope.map.center = value;
+            // $scope.map.center = value;
             currentMarker = value;
             currentMarker.id = 1;
             console.log(value);
