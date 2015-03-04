@@ -109,7 +109,7 @@ angular.module('parksandrecApp')
 
         $scope.park = park.data;
         $scope.features = park.data.features.join(', ');
-        //$scope.markers = coors;
+        $scope.markers = coors;
         //console.log(coors)
 
       });
