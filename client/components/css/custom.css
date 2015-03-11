@@ -151,8 +151,8 @@ a:hover {
   -o-background-size: cover;
   background-size: cover;
 }
-#land {
-  background: url(../img/land.png) no-repeat;
+#parks {
+  background: url(../img/parks.png) no-repeat;
   padding: 0px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -219,4 +219,7 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+h1, h2, h3, h4, h5, h6 {
+text-transform:none;
 }

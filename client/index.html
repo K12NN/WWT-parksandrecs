@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/css/bootstrap.css">
-      <link rel="stylesheet" href="app/css/bootstrap.min.css">
-      <link rel="stylesheet" href="app/css/custom.css">
       <link rel="stylesheet" href="app/font-awesome/css/font-awesome.css">
       <link rel="stylesheet" href="app/font-awesome/css/font-awesome.min.css">
       <link rel="stylesheet" href="components/css/bootstrap.css">
@@ -31,13 +28,21 @@
     <!-- endbuild -->
     <link rel="stylesheet" href="components/css/custom.css">
   </head>
-  <body ng-app="parksandrecApp">
+  <body ng-app="parksandrecApp" id="page-top">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view=""></div>
+
+    <div class="container container-fluid">
+        <div id="grass">
+            <a href="index.html"><img src="components/img/parks-n-rec.png" class="logo"></a>
+            <a ui-sref="profile"> <img src="components/img/customize.png" class="customize"></a>
+        </div>
+
+        <div ui-view=""></div>      
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -79,11 +84,6 @@
           <script src="app/admin/admin.js"></script>
           <script src="app/customize/customize.controller.js"></script>
           <script src="app/customize/customize.js"></script>
-          <script src="app/js/bootstrap.js"></script>
-          <script src="app/js/bootstrap.min.js"></script>
-          <script src="app/js/grayscale.js"></script>
-          <script src="app/js/jquery.easing.min.js"></script>
-          <script src="app/js/jquery.js"></script>
           <script src="app/main/geocontroller.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
