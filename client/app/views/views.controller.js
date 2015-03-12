@@ -19,15 +19,13 @@ angular.module('parksandrecApp')
       {page: "sports", title: "Sports"}
     ];
 })
-  .controller("LandCtrl", function($scope) {
-    $scope.test = "test";
-    console.log('land page loaded');
-})
   .controller("WaterCtrl", function($scope) {
     $scope.titles = [
-      {page: "where", title: "Where to go"},
-      {page: "what", title: "What to do"}
+      {page: "beaches", title: "Beaches"},
+      {page: "lakes", title: "Lakes"},
+      {page: "pools", title: "Swimming Pools"}
     ];
+    console.log('water');
 })
   .controller("BeachCtrl", function($scope,$http) {
     $http.get().success(function(data){$scope.beaches = data});

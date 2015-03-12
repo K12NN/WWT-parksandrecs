@@ -1,35 +1,13 @@
 <div class="container-white container-fluid">
     <div>
-        <a href="/parks/tag/Beaches">
-            <div class="col-xs-12 bot-border" id="beaches">
+        <a ng-repeat="item in titles" href="/parks/tag/{{item.title | nospace}}">
+            <div class="col-xs-12 bot-border" id="{{item.page}}">
                 <div>
-                    <img src="../../components/img/beaches-icon.png" border="0" class="noun-icon">
+                    <img src="../../components/img/{{item.page}}-icon.png" border="0" class="noun-icon">
                 </div>
                 <div class="icons-title">
-                    <h2>Beaches </h2>
+                    <h2>{{item.title}}</h2>
                 </div>
             </div>
         </a>
-        <a href="/parks/tag/Lakes">
-            <div class="col-xs-12 bot-border" id="lakes">
-                <div>
-                    <img src="../../components/img/lakes-icon.png" border="0" class="noun-icon">
-                </div>
-                <div class="icons-title">
-                    <h2>Lakes</h2>
-                </div>
-            </div>
-        </a>
-        <a href="/parks/tag/SwimmingPools">
-            <div class="col-xs-12 bot-border" id="pools">
-                <div>
-                    <img src="../../components/img/pools-icon.png" border="0" class="noun-icon">
-                </div>
-                <div class="icons-title">
-                    <h2>Swimming<br>Pools</h2>
-                </div>
-            </div>
-        </a>
-        
-    </div>
 </div>
